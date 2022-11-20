@@ -1,0 +1,10 @@
+окт. 23, 2022 5:52:48 PM org.example.Task1 bubbleSort
+INFO: element  1 has to change 3
+окт. 23, 2022 5:52:48 PM org.example.Task1 bubbleSort
+INFO: element  0 has to change 5
+окт. 23, 2022 5:52:48 PM org.example.Task1 bubbleSort
+INFO: element  8 has to change 9
+окт. 23, 2022 5:52:48 PM org.example.Task1 bubbleSort
+INFO: element  0 has to change 3
+окт. 23, 2022 5:52:48 PM org.example.Task1 bubbleSort
+INFO: element  0 has to change 1
