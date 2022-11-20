@@ -12,8 +12,10 @@ public class Program {
         products.add(new Product("Marmalade", 25));
         products.add(new Product("Cracker", 30));
         products.add(new Milk("Valio", 80, 3.2));
-        products.add(new PopDrink("Coca Cola", 55, 350, "y"));
-        products.add(new PopDrink("Coca Cola Diet", 55, 150, "n"));
+//        products.add(new PopDrink("Coca Cola", 55, 350, "y"));
+//        products.add(new PopDrink("Coca Cola Diet", 55, 150, "n"));
+        products.add(new PopDrink("Coca Cola", 55, 350, true));
+        products.add(new PopDrink("Coca Cola Diet", 55, 150, false));
         VendingMachine v1 = new VendingMachine(products);
         System.out.println(v1);
         System.out.println(v1.getProductBy("Chi"));
