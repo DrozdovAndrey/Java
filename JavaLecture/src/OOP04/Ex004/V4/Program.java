@@ -29,15 +29,19 @@ public class Program {
             System.out.println(pTchaikovsky.get(index));
         }
 
-        // Repository<VideoContent> videoContent = new Repository<>("videoContent");
-        // videoContent.add(new VideoContent("ВИДЕО 1"));
-        // videoContent.add(new VideoContent("ВИДЕО 2"));
+         Repository<VideoContent> videoContent = new Repository<>("videoContent");
+         videoContent.add(new VideoContent("ВИДЕО 1"));
+         videoContent.add(new VideoContent("ВИДЕО 2"));
         
-        // pTchaikovsky.merge(videoContent);
+         pTchaikovsky.merge(mGlinka);
 
-        // for (int index = 0; index < pTchaikovsky.count(); index++) {
-        //     System.out.println(pTchaikovsky.get(index));
-        // }
+         for (int index = 0; index < pTchaikovsky.count(); index++) {
+             System.out.println(pTchaikovsky.get(index));
+         }
+        System.out.println("-----------------");
+         for(AudioContent ac: pTchaikovsky){
+             System.out.println(ac);
+         }
 
 
 
