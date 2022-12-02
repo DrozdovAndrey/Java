@@ -1,6 +1,6 @@
-package OOPSeminar4;
+package OOPSeminar4.Weapons;
 
-public class Staff implements Weapon{
+public class Staff implements Weapon {
     @Override
     public int damage() {
         return 10;

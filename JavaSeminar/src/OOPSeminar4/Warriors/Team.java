@@ -1,4 +1,4 @@
-package OOPSeminar4;
+package OOPSeminar4.Warriors;
 
 import java.util.ArrayList;
 import java.util.Iterator;
