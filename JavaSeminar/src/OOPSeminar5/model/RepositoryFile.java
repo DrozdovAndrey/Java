@@ -73,4 +73,14 @@ public class RepositoryFile implements Repository {
             List<User> users = getAllUsers();
             return findUserById(users, userId);
     }
+
+    @Override
+    public void deleteUser(User user) throws Exception {
+        List<User> users = getAllUsers();
+        User foundUser = findUserById(users, user.getId());
+        users.remove(foundUser);
+        saveUsers(users);
+
+
+    }
 }

@@ -48,6 +48,10 @@ public class ViewUser {
                         User updateUser = setUser(true);
                         userController.updateUser(updateUser);
                         break;
+                    case DELETE:
+                        String idDeleteUser = prompt("Contact id: ");
+                        User deleteUser = userController.readUser(idDeleteUser);
+                        userController.deleteUser(deleteUser);
 
                 }
             } catch (Exception e) {
