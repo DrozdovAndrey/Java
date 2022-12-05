@@ -1,6 +1,6 @@
 package OOPSeminar5.controllers;
 
-import OOPSeminar5.model.Repository;
+import OOPSeminar5.model.RepositoryFile.Repository;
 import OOPSeminar5.model.User;
 
 import java.util.List;

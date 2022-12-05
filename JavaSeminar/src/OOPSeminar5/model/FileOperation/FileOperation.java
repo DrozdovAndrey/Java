@@ -1,4 +1,4 @@
-package OOPSeminar5.model;
+package OOPSeminar5.model.FileOperation;
 
 import java.util.List;
 

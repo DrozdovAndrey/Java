@@ -1,13 +1,17 @@
-package OOPSeminar5.model;
+package OOPSeminar5.model.RepositoryFile;
+
+import OOPSeminar5.model.FileOperation.FileOperation;
+import OOPSeminar5.model.User;
+import OOPSeminar5.model.UserMapper.UserMapperNew;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class RepositoryFile implements Repository {
-    private UserMapper mapper = new UserMapper();
+public class RepositoryFileNew implements Repository {
+    private UserMapperNew mapper = new UserMapperNew();
     private FileOperation fileOperation;
 
-    public RepositoryFile(FileOperation fileOperation) {
+    public RepositoryFileNew(FileOperation fileOperation) {
         this.fileOperation = fileOperation;
     }
 

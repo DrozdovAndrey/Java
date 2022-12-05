@@ -1,4 +1,6 @@
-package OOPSeminar5.model;
+package OOPSeminar5.model.UserMapper;
+
+import OOPSeminar5.model.User;
 
 public class UserMapper {
     public String map(User user) {

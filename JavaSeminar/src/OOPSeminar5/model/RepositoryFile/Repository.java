@@ -1,4 +1,6 @@
-package OOPSeminar5.model;
+package OOPSeminar5.model.RepositoryFile;
+
+import OOPSeminar5.model.User;
 
 import java.util.List;
 

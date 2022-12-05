@@ -1,4 +1,6 @@
-package OOPSeminar5.model;
+package OOPSeminar5.model.FileOperation;
+
+import OOPSeminar5.model.FileOperation.FileOperation;
 
 import java.io.*;
 import java.util.ArrayList;
