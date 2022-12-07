@@ -1,6 +1,7 @@
 package OOP05.Ex002Phonebook.Client;
 
-import Ex002Phonebook.UI.App;
+
+import OOP05.Ex002Phonebook.UI.App;
 
 public class Program {
 

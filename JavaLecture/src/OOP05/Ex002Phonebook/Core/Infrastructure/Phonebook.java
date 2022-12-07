@@ -3,7 +3,8 @@ package OOP05.Ex002Phonebook.Core.Infrastructure;
 import java.util.ArrayList;
 import java.util.List;
 
-import Ex002Phonebook.Core.Models.Contact;
+
+import OOP05.Ex002Phonebook.Core.Models.Contact;
 
 public class Phonebook {
 

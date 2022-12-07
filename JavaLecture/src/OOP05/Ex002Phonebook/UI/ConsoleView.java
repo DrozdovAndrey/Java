@@ -2,7 +2,8 @@ package OOP05.Ex002Phonebook.UI;
 
 import java.util.Scanner;
 
-import Ex002Phonebook.Core.MVP.View;
+
+import OOP05.Ex002Phonebook.Core.MVP.View;
 
 public class ConsoleView implements View {
     Scanner in;

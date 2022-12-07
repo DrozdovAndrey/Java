@@ -1,14 +1,14 @@
-package OOP05.Ex001Calc;
+package OOP05.Ex001Calc.Model;
 
-public class SumModel extends CalcModel {
+public class MultModel extends CalcModel {
 
-    public SumModel() {
+    public MultModel() {
         
     }
     // do_it
     @Override
     public int result() {
-        return x + y;
+        return x * y;
     }
 
     @Override

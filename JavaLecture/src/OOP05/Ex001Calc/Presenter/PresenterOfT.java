@@ -1,10 +1,16 @@
-package OOP05.Ex001Calc;
+package OOP05.Ex001Calc.Presenter;
 
-public class Presenter {
+import OOP05.Ex001Calc.Model.CalcModel;
+import OOP05.Ex001Calc.Model.Model;
+import OOP05.Ex001Calc.View.View;
+
+public class PresenterOfT<T extends CalcModel> {
+ 
+
     View view;
     Model model;
 
-    public Presenter(Model m, View v) {
+    public PresenterOfT(T m, View v) {
         model = m;
         view = v;
     }

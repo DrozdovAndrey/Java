@@ -1,4 +1,4 @@
-package OOP05.Ex001Calc;
+package OOP05.Ex001Calc.Model;
 
 public interface Model {
     int result();
