@@ -23,6 +23,7 @@ public class ViewUser {
                 com = Commands.valueOf(command);
             } catch (IllegalArgumentException e) {
                 System.out.println("I don't now this command");
+                continue;
             }
             if (com == Commands.EXIT)
                 return;
