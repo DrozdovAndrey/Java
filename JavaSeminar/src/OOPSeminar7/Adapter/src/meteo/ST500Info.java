@@ -2,11 +2,11 @@ package OOPSeminar7.Adapter.src.meteo;
 
 import java.time.*;
 
-class ST500Info {
+class  ST500Info {
     public SensorTemperature getData() {
         return new SensorTemperature() {
             public int identifier() {
-                return 1;
+                return 10;
             }
 
             public double temperature() {

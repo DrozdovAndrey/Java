@@ -1,0 +1,24 @@
+result5Stars calc sum 5Completed9Get resultresult9Stars calc sum, arg: 5
+Completed10
+Get result: 
+result10
+Stars calc sum, arg: 5
+Completed10
+Get result: 
+result10
+Stars calc multi, arg: 5
+Completed: 25
+Get result..
+result: 25
+*   *   *Stars calc sum, arg: 9
+*   *   *Completed: 14
+*   *   *Get result..
+*   *   *result: 14
+*   *   *
+Stars calc sum, arg: 8
+*   *   *
+Completed: 13
+*   *   *
+Get result..
+*   *   *
+result: 13
