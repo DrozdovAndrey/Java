@@ -2,6 +2,7 @@ package OOP_HomeworkSix.View;
 
 import OOP_HomeworkSix.Controllers.NoteController;
 import OOP_HomeworkSix.Model.Note.Note;
+import OOP_HomeworkSix.Model.Note.SimpleNote;
 
 import java.util.List;
 import java.util.Scanner;
@@ -29,13 +30,12 @@ public class ViewUser {
             try {
                 switch (com) {
                     case CREATE -> {
-                        String hading = prompt("Input hading: ");
-                        String textBody = prompt("Input note text: ");
-                        noteController.createNote(hading, textBody);
+                        Note createNote = setNote(false);
+                        noteController.createNote(createNote);
                     }
                     case READ -> {
-                        int id = promptInt();
-                        noteController.viewNote(id);
+                        int idRead = promptInt();
+                        System.out.println(noteController.viewNote(idRead));
                     }
                     case LIST -> {
                         List<Note> notes = noteController.viewAllNotes();
@@ -43,8 +43,14 @@ public class ViewUser {
                             System.out.println(note);
                         }
                     }
-                    case UPDATE -> System.out.println("In proses");
-                    case DELETE -> System.out.println("Delete in proses");
+                    case UPDATE -> {
+                        Note updateNote = setNote(true);
+                        noteController.editNote(updateNote);
+                    }
+                    case DELETE -> {
+                        int idDelete = promptInt();
+                        noteController.deleteNote(idDelete);
+                    }
                 }
             } catch (Exception e) {
                 System.out.println(e.getMessage());
@@ -63,6 +69,21 @@ public class ViewUser {
         Scanner in = new Scanner(System.in);
         System.out.print(message);
         return in;
+    }
+
+    private Note setNote(boolean forUpdate) {
+        int idUpdate = 0;
+        if (forUpdate) {
+            idUpdate = promptInt();
+
+        }
+        String hading = prompt("Input hading: ");
+        String textBody = prompt("Input note text : ");
+        if (forUpdate) {
+            return new SimpleNote(idUpdate, hading, textBody);
+        }
+        return new SimpleNote(hading, textBody);
+
     }
 
 }

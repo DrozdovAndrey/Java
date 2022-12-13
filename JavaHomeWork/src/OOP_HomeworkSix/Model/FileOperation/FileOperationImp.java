@@ -47,7 +47,7 @@ public class FileOperationImp implements FileOperation {
     }
 
     public void saveAllLines(List<String> lines) {
-        try (FileWriter writer = new FileWriter(fileName, true)) {
+        try (FileWriter writer = new FileWriter(fileName, false)) {
             for (String line : lines) {
                 // запись всей строки
                 writer.write(line);

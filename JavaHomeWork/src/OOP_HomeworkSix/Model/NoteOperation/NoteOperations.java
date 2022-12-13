@@ -5,25 +5,22 @@ import OOP_HomeworkSix.Model.FileOperation.FileOperation;
 import OOP_HomeworkSix.Model.FileOperation.FileOperationImp;
 import OOP_HomeworkSix.Model.Note.Note;
 import OOP_HomeworkSix.Model.Note.SimpleNote;
-import OOP_HomeworkSix.Model.Notebook.Notebook;
-import OOP_HomeworkSix.Model.Notebook.SimpleNotebook;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class NoteOperations implements Operations {
-    private Note note;
-    private final Notebook notebook;
-    private FileOperation fileOperation = new FileOperationImp("C:\\Users\\drozd\\Documents" +
-            "\\GB\\Java\\JavaHomeWork\\src\\OOP_HomeworkSix\\Notebook.txt");
-    private NoteMapper noteMapper = new NoteMapper();
 
-    public NoteOperations() {
-        this.notebook = new SimpleNotebook();
+
+    private final FileOperation fileOperation;
+    private final NoteMapper noteMapper = new NoteMapper();
+
+    public NoteOperations(FileOperation fileOperation) {
+        this.fileOperation = fileOperation;
     }
 
     @Override
-    public void createNote(String hading, String textBody) {
+    public void createNote(Note createNote) {
         List<Note> notes = viewAllNotes();
         int max = 0;
         for (Note note : notes) {
@@ -33,9 +30,9 @@ public class NoteOperations implements Operations {
             }
         }
         int newId = max + 1;
-        Note note = new SimpleNote(newId,hading, textBody);
-        notebook.addNote(note);
-        saveNote(notebook.getNotes());
+        Note note = new SimpleNote(newId, createNote.getHeading(), createNote.getText());
+        notes.add(note);
+        saveNote(notes);
     }
     private void saveNote(List<Note> notes) {
         List<String> lines = new ArrayList<>();
@@ -46,13 +43,9 @@ public class NoteOperations implements Operations {
     }
 
     @Override
-    public void viewNote(int id) {
+    public Note viewNote(int id) throws Exception {
         List<Note> notes = viewAllNotes();
-        for (Note note: notes) {
-            if (note.getId() == id){
-                System.out.println(note);
-            }
-        }
+        return findNote(notes, id);
     }
 
     @Override
@@ -67,18 +60,30 @@ public class NoteOperations implements Operations {
 
 
     @Override
-    public Note editNote() {
-        return null;
+    public Note editNote(Note note) throws Exception {
+        List<Note> notes = viewAllNotes();
+        Note foundNote = findNote(notes, note.getId());
+        foundNote.setHeading(note.getHeading());
+        foundNote.setText(note.getText());
+        saveNote(notes);
+        return foundNote;
     }
 
     @Override
-    public Note deleteNote() {
-        return null;
+    public void deleteNote(int id) throws Exception {
+        List<Note> notes = viewAllNotes();
+        Note foundNote = findNote(notes, id);
+        notes.remove(foundNote);
+        saveNote(notes);
+    }
+    public Note findNote(List<Note> notes, int id) throws Exception{
+        for (Note note:notes) {
+            if (note.getId() == id){
+                return note;
+            }
+        }
+        throw new Exception("Note didn't found");
     }
 
-    @Override
-    public Note deleteAllNotes() {
-        return null;
-    }
 
 }
