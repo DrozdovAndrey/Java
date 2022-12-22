@@ -18,8 +18,7 @@ public class Task1 {
             try {
                 System.out.println("Input float number:");
                 Scanner sc = new Scanner(System.in);
-                float num = sc.nextFloat();
-                return num;
+                return sc.nextFloat();
             }catch (InputMismatchException e){
                 System.out.println("it is not a float number, try again!");
             }
