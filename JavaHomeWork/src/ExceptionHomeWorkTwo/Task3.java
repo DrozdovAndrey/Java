@@ -1,6 +1,8 @@
 package ExceptionHomeWorkTwo;
 
 
+import java.util.Arrays;
+
 public class Task3 {
     public static void main(String[] args) throws Exception {
         try {
@@ -9,7 +11,8 @@ public class Task3 {
             System.out.println(a / b);
             printSum(5, 234);
             int[] abc = { 1, 2 };
-            abc[3] = 9;
+            abc[1] = 9;
+            System.out.println(Arrays.toString(abc));
         } catch (NullPointerException ex) {
             System.out.println("”казатель не может указывать на null!");
         } catch (IndexOutOfBoundsException ex) {
