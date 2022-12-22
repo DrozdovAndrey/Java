@@ -13,8 +13,8 @@ public class Task3 {
             int[] abc = { 1, 2 };
             abc[1] = 9;
             System.out.println(Arrays.toString(abc));
-        } catch (NullPointerException ex) {
-            System.out.println("”казатель не может указывать на null!");
+        } catch (ArithmeticException | NullPointerException ex) {
+            System.out.println("Exception: "+ex.getMessage());
         } catch (IndexOutOfBoundsException ex) {
             System.out.println("ћассив выходит за пределы своего размера!");
         }
